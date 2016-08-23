@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/khana2go/link-tracker/issues"
   },
-  "homepage": "https://github.com/khana2go/link-tracker#readme"
+  "homepage": "https://github.com/khana2go/link-tracker#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "underscore": "^1.8.3"
+  }
 }

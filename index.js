@@ -2,20 +2,17 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 const _ = require('underscore');
-
+const swig  = require('swig');
+const mongoose = require('mongoose');
+const bluebird =  require('bluebird');
 
 //Cache tracker image
 const img = fs.readFileSync('./public/img/a.gif');
-const DEFAULT = 'https://www.khana2go.com';
-
-
-const swig  = require('swig');
+const DEFAULT = process.env.DEFAULT_REDIRECT_URL || 'http://www.google.com';
 const template = swig.compileFile('./public/redirect.html');
 
 
-const mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
-
+mongoose.Promise = bluebird;
 mongoose.connect('mongodb://localhost/tracklinksdb');
 
 const OPEN = 'open';
@@ -62,7 +59,7 @@ app.get('/*', function(req, res) {
 var server = app.listen(80, function () {
     var host = server.address().address;
     var port = server.address().port;
-    console.log('Khana2go Link Tracker http://%s:%s', host, port);
+    console.log('Link Tracker http://%s:%s', host, port);
 });
 
 const track = (req, hitType) => {
