@@ -1,0 +1,24 @@
+{
+  "name": "link-tracker",
+  "version": "1.0.0",
+  "description": "Track Links",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khana2go/link-tracker.git"
+  },
+  "keywords": [
+    "khana2go",
+    "link",
+    "tracking"
+  ],
+  "author": "khana2go",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khana2go/link-tracker/issues"
+  },
+  "homepage": "https://github.com/khana2go/link-tracker#readme"
+}
