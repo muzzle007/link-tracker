@@ -22,7 +22,10 @@
   },
   "homepage": "https://github.com/khana2go/link-tracker#readme",
   "dependencies": {
+    "bluebird": "^3.4.1",
     "express": "^4.14.0",
+    "mongoose": "^4.5.9",
+    "swig": "^1.4.2",
     "underscore": "^1.8.3"
   }
 }
