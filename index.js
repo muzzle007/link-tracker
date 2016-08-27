@@ -7,9 +7,9 @@ const mongoose = require('mongoose');
 const bluebird =  require('bluebird');
 
 //Cache tracker image
-const img = fs.readFileSync('./public/img/a.gif');
-const DEFAULT = process.env.DEFAULT_REDIRECT_URL || 'http://www.google.com';
-const template = swig.compileFile('./public/redirect.html');
+// const img = fs.readFileSync('./public/img/a.gif');
+// const DEFAULT = process.env.DEFAULT_REDIRECT_URL || 'http://www.google.com';
+// const template = swig.compileFile('./public/redirect.html');
 
 
 mongoose.Promise = bluebird;
@@ -56,7 +56,7 @@ app.get('/*', function(req, res) {
     }
 });
 
-var server = app.listen(80, function () {
+var server = app.listen(3000, function () {
     var host = server.address().address;
     var port = server.address().port;
     console.log('Link Tracker http://%s:%s', host, port);
